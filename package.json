@@ -1,0 +1,56 @@
+{
+  "name": "@jm/eslint-config-jest",
+  "version": "1.0.0",
+  "description": "An ESLint config which point out only problems and enforcing best practices for Jest environment",
+  "exports": {
+    ".": "./configs/index.js",
+    "./formatting": "./configs/formatting.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "clean-slate": "rimraf --glob **/node_modules && npm i",
+    "code-quality:check": "npm run lint && npm run formatting",
+    "code-quality:fix": "npm run lint:fix && npm run formatting:fix",
+    "cq-check": "npm run code-quality:check",
+    "cq-fix": "npm run code-quality:fix",
+    "eslint": "eslint .",
+    "formatting": "npm run prettier",
+    "formatting:fix": "npm run prettier -- --write",
+    "lint": "npm run eslint",
+    "lint:fix": "npm run eslint -- --fix",
+    "prettier": "prettier --check .",
+    "test": "jest",
+    "update:packages": "npm update --save"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Johan Meester",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-jest-extended": "^2.0.0",
+    "eslint-plugin-jest-formatting": "^3.1.0",
+    "eslint-plugin-unicorn": "^47.0.0"
+  },
+  "devDependencies": {
+    "@jm/eslint-config-base": "github:Mensae/jm-eslint-config-base",
+    "eslint": "^8.40.0",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8",
+    "jest": "^29"
+  },
+  "optionalDependencies": {
+    "@jm/eslint-config-base": "github:Mensae/jm-eslint-config-base"
+  }
+}
