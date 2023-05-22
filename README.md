@@ -1,7 +1,6 @@
 # @jm/eslint-config-jest
 
-An [ESLint](http://eslint.org/) config that enforces best practices and prevents possible problems for the
-[Node.js](https://nodejs.org/) environment.
+An [ESLint](http://eslint.org/) config that enforces best practices and prevents possible problems with Jest.
 
 It is meant as an extention to [@jm/eslint-config-base](https://github.com/Mensae/jm-eslint-config-base), but can
 be used without.
