@@ -1,6 +1,6 @@
 {
   "name": "@jm/eslint-config-jest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An ESLint config which point out only problems and enforcing best practices for Jest environment",
   "exports": {
     ".": "./configs/index.js",
